@@ -103,7 +103,6 @@
 				D032471AA2C9C7BF7B8CC464 /* Pods-DssaysDemoUITests.debug.xcconfig */,
 				7EF1834EBA0CFF23DC55BC84 /* Pods-DssaysDemoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -307,15 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DssaysDemoUITests-checkManifestLockResult.txt",
 			);
@@ -329,15 +324,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DssaysDemoTests-checkManifestLockResult.txt",
 			);
@@ -351,15 +342,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DssaysDemo-checkManifestLockResult.txt",
 			);
@@ -432,6 +419,113 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F953E2F32269618800EF1A47 /* InhouseRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = InhouseRelease;
+		};
+		F953E2F42269618800EF1A47 /* InhouseRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DF7CA0C07387DF2B5DF230F /* Pods-DssaysDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AWH3RVFKNL;
+				INFOPLIST_FILE = DssaysDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Block.DssaysDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = InhouseRelease;
+		};
+		F953E2F52269618800EF1A47 /* InhouseRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F3EC738C1FB35E91D04E89 /* Pods-DssaysDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DssaysDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Block.DssaysDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DssaysDemo.app/DssaysDemo";
+			};
+			name = InhouseRelease;
+		};
+		F953E2F62269618800EF1A47 /* InhouseRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EF1834EBA0CFF23DC55BC84 /* Pods-DssaysDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DssaysDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Block.DssaysDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DssaysDemo;
+			};
+			name = InhouseRelease;
+		};
 		F96B28A82268211A00469E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -490,7 +584,7 @@
 			};
 			name = Debug;
 		};
-		F96B28A92268211A00469E9A /* Release */ = {
+		F96B28A92268211A00469E9A /* DistributionRelease */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -540,7 +634,7 @@
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = DistributionRelease;
 		};
 		F96B28AB2268211A00469E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -560,7 +654,7 @@
 			};
 			name = Debug;
 		};
-		F96B28AC2268211A00469E9A /* Release */ = {
+		F96B28AC2268211A00469E9A /* DistributionRelease */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DF7CA0C07387DF2B5DF230F /* Pods-DssaysDemo.release.xcconfig */;
 			buildSettings = {
@@ -576,7 +670,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = DistributionRelease;
 		};
 		F96B28AE2268211A00469E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -597,7 +691,7 @@
 			};
 			name = Debug;
 		};
-		F96B28AF2268211A00469E9A /* Release */ = {
+		F96B28AF2268211A00469E9A /* DistributionRelease */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0F3EC738C1FB35E91D04E89 /* Pods-DssaysDemoTests.release.xcconfig */;
 			buildSettings = {
@@ -614,7 +708,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DssaysDemo.app/DssaysDemo";
 			};
-			name = Release;
+			name = DistributionRelease;
 		};
 		F96B28B12268211A00469E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -634,7 +728,7 @@
 			};
 			name = Debug;
 		};
-		F96B28B22268211A00469E9A /* Release */ = {
+		F96B28B22268211A00469E9A /* DistributionRelease */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EF1834EBA0CFF23DC55BC84 /* Pods-DssaysDemoUITests.release.xcconfig */;
 			buildSettings = {
@@ -650,7 +744,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DssaysDemo;
 			};
-			name = Release;
+			name = DistributionRelease;
 		};
 /* End XCBuildConfiguration section */
 
@@ -659,37 +753,41 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F96B28A82268211A00469E9A /* Debug */,
-				F96B28A92268211A00469E9A /* Release */,
+				F96B28A92268211A00469E9A /* DistributionRelease */,
+				F953E2F32269618800EF1A47 /* InhouseRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = DistributionRelease;
 		};
 		F96B28AA2268211A00469E9A /* Build configuration list for PBXNativeTarget "DssaysDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F96B28AB2268211A00469E9A /* Debug */,
-				F96B28AC2268211A00469E9A /* Release */,
+				F96B28AC2268211A00469E9A /* DistributionRelease */,
+				F953E2F42269618800EF1A47 /* InhouseRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = DistributionRelease;
 		};
 		F96B28AD2268211A00469E9A /* Build configuration list for PBXNativeTarget "DssaysDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F96B28AE2268211A00469E9A /* Debug */,
-				F96B28AF2268211A00469E9A /* Release */,
+				F96B28AF2268211A00469E9A /* DistributionRelease */,
+				F953E2F52269618800EF1A47 /* InhouseRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = DistributionRelease;
 		};
 		F96B28B02268211A00469E9A /* Build configuration list for PBXNativeTarget "DssaysDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F96B28B12268211A00469E9A /* Debug */,
-				F96B28B22268211A00469E9A /* Release */,
+				F96B28B22268211A00469E9A /* DistributionRelease */,
+				F953E2F62269618800EF1A47 /* InhouseRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = DistributionRelease;
 		};
 /* End XCConfigurationList section */
 	};
