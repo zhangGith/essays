@@ -17,7 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"---->%@", [NSBundle mainBundle].infoDictionary);
     
+    NSString *str = nil;
+    
+#if DEBUG
+    
+    str = @"debug";
+    
+#elif DistributionRelease
+    
+    str = @"distrib";
+    
+#else
+    
+    str = @"release";
+    
+#endif
+    
+    NSLog(@"----->%@", str);
 }
 
 
