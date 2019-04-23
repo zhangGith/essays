@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,5 +45,113 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="771.36431784107947"/>
         </scene>
+        <!--Audio Player View Controller-->
+        <scene sceneID="FwI-Nb-OqJ">
+            <objects>
+                <viewController storyboardIdentifier="audioPlayer" id="Ab4-qa-APX" customClass="AudioPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rh6-Sv-uw2"/>
+                        <viewControllerLayoutGuide type="bottom" id="BTl-Oy-doZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qDT-cM-h7W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ren'eLiu" translatesAutoresizingMaskIntoConstraints="NO" id="m8w-Bf-U3P">
+                                <rect key="frame" x="0.0" y="-8" width="320" height="568"/>
+                            </imageView>
+                            <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDI-u9-3Pc" userLabel="controlPanel">
+                                <rect key="frame" x="0.0" y="408" width="375" height="259"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5E-5d-Uee" userLabel="progress">
+                                        <rect key="frame" x="0.0" y="60" width="320" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T47-sd-v9C" userLabel="play">
+                                        <rect key="frame" x="128" y="78" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" image="playing_btn_play_n"/>
+                                        <state key="highlighted" image="playing_btn_play_h"/>
+                                        <connections>
+                                            <action selector="playClick:" destination="Ab4-qa-APX" eventType="touchUpInside" id="Yj3-78-bc5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iu-IF-Xhk" userLabel="prev">
+                                        <rect key="frame" x="40" y="78" width="75" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" image="playing_btn_pre_n"/>
+                                        <state key="highlighted" image="playing_btn_pre_h"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flV-CU-XmM" userLabel="next">
+                                        <rect key="frame" x="212" y="78" width="75" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" image="playing_btn_next_n"/>
+                                        <state key="highlighted" image="playing_btn_next_h"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWH-jd-uxU" userLabel="love">
+                                        <rect key="frame" x="262" y="11" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" image="playing_btn_love"/>
+                                        <state key="highlighted" image="playing_btn_love_h"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNS-r3-rjF" userLabel="singer">
+                                        <rect key="frame" x="8" y="18" width="203" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBh-Rt-ngC" userLabel="download">
+                                        <rect key="frame" x="219" y="11" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" image="nowplaying_download_btn"/>
+                                        <state key="highlighted" image="nowplaying_download_btn_h"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E3Y-RO-ohV" firstAttribute="trailing" secondItem="m8w-Bf-U3P" secondAttribute="trailing" constant="55" id="06g-DO-WCT"/>
+                            <constraint firstItem="BDI-u9-3Pc" firstAttribute="top" secondItem="Rh6-Sv-uw2" secondAttribute="bottom" constant="388" id="Arn-7s-qs2"/>
+                            <constraint firstItem="BTl-Oy-doZ" firstAttribute="top" secondItem="BDI-u9-3Pc" secondAttribute="bottom" id="QAm-UB-WR2"/>
+                            <constraint firstItem="BDI-u9-3Pc" firstAttribute="leading" secondItem="E3Y-RO-ohV" secondAttribute="leading" id="Spk-h6-RP3"/>
+                            <constraint firstItem="m8w-Bf-U3P" firstAttribute="top" secondItem="qDT-cM-h7W" secondAttribute="topMargin" constant="-28" id="Wv1-fS-9lw"/>
+                            <constraint firstItem="E3Y-RO-ohV" firstAttribute="trailing" secondItem="BDI-u9-3Pc" secondAttribute="trailing" id="fcW-l2-J5s"/>
+                            <constraint firstItem="BDI-u9-3Pc" firstAttribute="leading" secondItem="m8w-Bf-U3P" secondAttribute="leading" id="iIN-gf-f0I"/>
+                            <constraint firstItem="BTl-Oy-doZ" firstAttribute="top" secondItem="m8w-Bf-U3P" secondAttribute="bottom" constant="107" id="pYM-Zd-0qG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E3Y-RO-ohV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TW5-ms-YRi"/>
+                    <connections>
+                        <outlet property="playPause" destination="T47-sd-v9C" id="yMv-di-yFs"/>
+                        <outlet property="playProgress" destination="o5E-5d-Uee" id="lbn-Ou-8U7"/>
+                        <outlet property="singer" destination="zNS-r3-rjF" id="RpY-hY-yH1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJz-KG-07I" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="274"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Ren'eLiu" width="550" height="745"/>
+        <image name="nowplaying_download_btn" width="40" height="40"/>
+        <image name="nowplaying_download_btn_h" width="40" height="40"/>
+        <image name="playing_btn_love" width="40" height="40"/>
+        <image name="playing_btn_love_h" width="40" height="40"/>
+        <image name="playing_btn_next_h" width="40" height="40"/>
+        <image name="playing_btn_next_n" width="40" height="40"/>
+        <image name="playing_btn_play_h" width="65" height="65"/>
+        <image name="playing_btn_play_n" width="65" height="65"/>
+        <image name="playing_btn_pre_h" width="40" height="40"/>
+        <image name="playing_btn_pre_n" width="40" height="40"/>
+    </resources>
 </document>

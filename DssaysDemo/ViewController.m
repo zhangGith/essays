@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SpeechViewController.h"
 #import "AudioToolBoxViewController.h"
+#import "AudioPlayerViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -42,7 +43,8 @@
     NSLog(@"----->%@", str);
     
     self.dataSource = @[@{@"name" : @"speech", @"next" : @"SpeechViewController"},
-                        @{@"name" : @"audio tool box", @"next" : @"AudioToolBoxViewController"}];
+                        @{@"name" : @"audio tool box", @"next" : @"AudioToolBoxViewController"},
+                         @{@"name" : @"audio player", @"next" : @"AudioPlayerViewController"}];
     [self setupTableView];
 
 }
@@ -75,7 +77,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *dic = self.dataSource[indexPath.row];
     NSString *nextStr = dic[@"next"];
-    [self.navigationController pushViewController:[NSClassFromString(nextStr) new] animated:YES];
+    UIViewController *vc;
+    if ([nextStr isEqualToString:@"AudioPlayerViewController"]) {
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"audioPlayer"];
+    } else {
+        vc = [NSClassFromString(nextStr) new];
+    }
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 
