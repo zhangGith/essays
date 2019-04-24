@@ -56,9 +56,10 @@
         
         NSError *error = nil;
         _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-        _audioPlayer.numberOfLoops = 0;
+        _audioPlayer.numberOfLoops = -1;
         _audioPlayer.delegate = self;
         [_audioPlayer prepareToPlay];
+        _audioPlayer.currentTime = _audioPlayer.duration / 3;
         
         if (error) {
             NSLog(@"error = %@", error.localizedDescription);
@@ -101,6 +102,12 @@
         [sender setImage:[UIImage imageNamed:@"playing_btn_pause_h"] forState:UIControlStateHighlighted];
         [self play];
     }
+}
+- (IBAction)previousClick:(id)sender {
+    self.audioPlayer.volume -= 0.1;
+}
+- (IBAction)nextClick:(id)sender {
+    self.audioPlayer.volume += 0.1;
 }
 
 - (void)dealloc {

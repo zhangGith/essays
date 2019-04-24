@@ -10,6 +10,7 @@
 #import "SpeechViewController.h"
 #import "AudioToolBoxViewController.h"
 #import "AudioPlayerViewController.h"
+#import "MPMediaPlayerViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -44,7 +45,8 @@
     
     self.dataSource = @[@{@"name" : @"speech", @"next" : @"SpeechViewController"},
                         @{@"name" : @"audio tool box", @"next" : @"AudioToolBoxViewController"},
-                         @{@"name" : @"audio player", @"next" : @"AudioPlayerViewController"}];
+                         @{@"name" : @"audio player", @"next" : @"AudioPlayerViewController"},
+                         @{@"name" : @"media player", @"next" : @"MPMediaPlayerViewController"}];
     [self setupTableView];
 
 }
@@ -80,6 +82,9 @@
     UIViewController *vc;
     if ([nextStr isEqualToString:@"AudioPlayerViewController"]) {
         vc = [self.storyboard instantiateViewControllerWithIdentifier:@"audioPlayer"];
+    } else if ([nextStr isEqualToString:@"MPMediaPlayerViewController"]) {
+        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"mediaPlayer"];
+
     } else {
         vc = [NSClassFromString(nextStr) new];
     }
